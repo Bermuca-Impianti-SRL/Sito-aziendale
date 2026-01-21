@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo.png.png">
+    <title>Lavora con noi - Bermuca Impianti</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* FIX ESTETICO: Blocca l'altezza dei campi ed evita deformazioni */
+        .contact-form input[type="text"], 
+        .contact-form input[type="email"], 
+        .contact-form input[type="tel"],
+        .contact-form textarea,
+        .contact-form input[type="file"] {
+            height: 48px !important;
+            padding: 10px 15px !important;
+            margin-bottom: 15px !important;
+            box-sizing: border-box !important;
+            border: 1px solid #ccc !important;
+            border-radius: 8px !important;
+            width: 100% !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        .contact-form textarea {
+            height: 120px !important;
+        }
+
+        /* Affianca Nome e Cognome */
+        .contact-form .form-row {
+            display: flex !important;
+            gap: 15px !important;
+        }
+        .contact-form .form-row input {
+            flex: 1 !important;
+        }
+
+        /* Allineamento Privacy */
+        .contact-form .privacy-check {
+            display: flex !important;
+            align-items: flex-start !important;
+            gap: 10px !important;
+            margin: 20px 0 !important;
+        }
+        .contact-form .privacy-check input {
+            width: 18px !important;
+            height: 18px !important;
+            flex-shrink: 0 !important;
+            margin-top: 3px !important;
+        }
+
+        /* Bottone Blu Bermuca */
+        .contact-form .btn-submit {
+            background-color: #0056b3 !important;
+            color: white !important;
+            border-radius: 50px !important;
+            padding: 15px !important;
+            font-weight: bold !important;
+            width: 100% !important;
+            border: none !important;
+            cursor: pointer !important;
+            text-transform: uppercase !important;
+        }
+
+        #form-result {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo.png.png" alt="Bermuca Impianti Logo">
+        </a>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">Chi Siamo</a>
+        <a href="index.html#contact">Contatti</a>
+        <a href="lavora-con-noi.html">Lavora con noi</a>
+    </nav>
+</header>
+
+<section class="hero secondary-hero">
+    <div class="hero-content">
+        <h1>LAVORA CON NOI</h1>
+        <h2>Entra a far parte di una squadra di professionisti esperti</h2>
+    </div>
+</section>
+
+<section class="join-us-text">
+    <div class="container-small">
+        <h2>CRESCI CON NOI</h2>
+        <p>Siamo costantemente alla ricerca di figure specializzate e giovani motivati da inserire nel nostro organico per la gestione di impianti civili e industriali in tutta la Lombardia.</p>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="contact-container">
+        <div class="contact-info-side">
+            <h2>INVIA LA TUA CANDIDATURA</h2>
+            <p>Compila il form e allega il tuo Curriculum Vitae. Valutiamo costantemente nuovi profili.</p>
+            <p class="privacy-note">
+                Il tuo curriculum verrà trattato con la massima riservatezza. I dati saranno utilizzati esclusivamente per il processo di selezione interno e non verranno ceduti a terzi, in conformità con il GDPR.
+            </p>
+        </div>
+
+        <form id="contact-form" class="contact-form">
+            <div class="form-row">
+                <input type="text" name="fi-sender-firstName" placeholder="Nome" required>
+                <input type="text" name="fi-sender-lastName" placeholder="Cognome" required>
+            </div>
+            
+            <input type="email" name="fi-sender-email" placeholder="Email" required>
+            <input type="tel" name="fi-sender-phone" placeholder="Telefono" required>
+
+            <div class="file-upload-section">
+                <label style="display:block; margin-bottom:5px; font-weight:500;">Carica il tuo CV (formato PDF)</label>
+                <input type="file" name="fi-file-cv" accept=".pdf" required>
+            </div>
+
+            <textarea name="fi-text-message" placeholder="Presentati brevemente..."></textarea>
+
+            <div class="privacy-check">
+                <input type="checkbox" id="privacy_policy" name="privacy_accepted" required>
+                <label for="privacy_policy">
+                    Ho letto l' <a href="https://www.iubenda.com/privacy-policy/42460115" target="_blank">Informativa Privacy</a> e acconsento al trattamento dei miei dati per finalità di selezione del personale.
+                </label>
+            </div>
+
+            <button type="submit" class="btn-submit">INVIA CANDIDATURA</button>
+            <p id="form-result"></p>
+        </form>
+    </div>
+</section>
+
+<footer>
+
+        <div class="footer-container">
+
+            <div class="footer-info">
+
+                <p><strong>BERMUCA IMPIANTI SRL</strong></p>
+
+                <p>Sede Legale: Via Oberdan Guglielmo 72, Arosio (Como)</p>
+
+                <p>P.IVA: 03892480132</p>
+
+            </div>
+
+            <div class="footer-contact">
+
+                <p>Email: <a href="mailto:info@bermucaimpiantisrl.com">info@bermucaimpiantisrl.com</a></p>
+
+                <p>
+
+        
+
+        REA: CO-427228 |
+
+        PEC: <a href="mailto:bermucaimpianti@lamiapec.it" style="color: #007bff; text-decoration: none;">bermucaimpianti@lamiapec.it</a>
+
+    </p>
+
+    <a href="https://www.iubenda.com/privacy-policy/42460115" class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+
+<a href="https://www.iubenda.com/privacy-policy/42460115/cookie-policy" class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe " title="Cookie Policy ">Cookie Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+
+
+
+                <p>© 2026 Bermuca Impianti SRL - Tutti i diritti riservati</p>
+
+            </div>
+
+            <script type="text/javascript" src="https://embeds.iubenda.com/widgets/39ed1544-fe5f-42fa-bc66-ac2f96cda1c0.js"></script>
+
+        </div>
+
+    </footer>
+
+<script src="https://forminit.com/sdk/v1/forminit.js"></script>
+<script>
+    const forminit = new Forminit();
+    const FORM_ID = 'ko6kztxzg4h'; 
+    const form = document.getElementById('contact-form');
+    const resultMessage = document.getElementById('form-result');
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        resultMessage.style.color = "black";
+        resultMessage.textContent = "Invio in corso...";
+
+        const formData = new FormData(form);
+        const { data, error } = await forminit.submit(FORM_ID, formData);
+
+        if (error) {
+            resultMessage.style.color = "red";
+            resultMessage.textContent = "Errore: " + error.message;
+        } else {
+            resultMessage.style.color = "green";
+            resultMessage.textContent = "Candidatura inviata con successo!";
+            form.reset();
+        }
+    });
+</script>
+
+</body>
+</html>
